@@ -1,0 +1,3 @@
+include ':pepperextras'
+include ':app'
+rootProject.name = "TBCbank"

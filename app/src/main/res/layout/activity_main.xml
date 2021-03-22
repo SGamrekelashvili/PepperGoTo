@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    tools:context=".MainActivity"
+    android:orientation="horizontal">
+
+
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:orientation="horizontal"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3">
+
+
+
+        <com.softbankrobotics.dx.pepperextras.ui.ExplorationMapView
+            android:id="@+id/explorationMapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <Button
+            android:id="@+id/goToRandom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Go To Random">
+
+        </Button>
+        <Button
+            android:id="@+id/sTopLocalization"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Stop Localization">
+
+        </Button>
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            app:layout_constraintRight_toLeftOf="@+id/add_item_edit"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/goto_button"
+            app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/goto_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GoTo"
+            app:layout_constraintLeft_toLeftOf="@+id/save_button"
+            app:layout_constraintRight_toRightOf="@+id/save_button"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/save_button" />
+        <EditText
+            android:id="@+id/add_item_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:labelFor="@+id/add_item_edit"
+            android:hint="Location"
+            tools:text="Location"
+            app:layout_constraintBaseline_toBaselineOf="@+id/save_button"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/save_button" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@+id/add_item_edit"
+            app:layout_constraintRight_toRightOf="@+id/add_item_edit"
+            app:layout_constraintTop_toTopOf="@+id/goto_button"
+            app:layout_constraintBottom_toBottomOf="@+id/goto_button"
+            app:layout_constraintHorizontal_bias="0.0" />
+
+
+        <Button
+            android:id="@+id/startMappingButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start mapping"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/extendMapButton"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <Button
+            android:id="@+id/extendMapButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Extend map"
+            app:layout_constraintBottom_toBottomOf="@+id/startMappingButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/startMappingButton"
+            app:layout_constraintTop_toTopOf="@+id/startMappingButton"/>
+
+        <Button
+            android:id="@+id/get"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="get all"/>
+
+        <Button
+            android:id="@+id/loadMap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Load Map" />
+
+        <Button
+            android:id="@+id/localizeHimself"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Localize Himself"/>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

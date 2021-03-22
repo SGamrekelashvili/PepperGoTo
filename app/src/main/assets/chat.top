@@ -1,0 +1,23 @@
+topic: ~chat()
+
+
+
+u:("[Hello "good morning" Hi] {Pepper}") hello ^rand[mgelo lomo nadiro]
+
+
+u:("who are you ?") My name is Pepper and I'm a humanoid robot.
+
+
+u:("what is your name ?")
+^rand[
+        "It seems you don't remember my name. But it's okay! My name is Pepper!"
+        "I'll tell you again! My name is Pepper!"
+        "Pepper."
+    ]
+
+u:([
+    "when is your [birthday "date of birth" "birth date"]"
+    "[when "what [day year]"] were you [born created invented]"
+]?)
+I was created in 2014, but I don't know the exact day.
+
